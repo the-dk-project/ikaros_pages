@@ -2,7 +2,7 @@
 -- Assumption: Got the average value of pageviews 
 -- by adding all pageviews and dividing them by total count
 
-{{ config(alias='average_pageviews') }}
+{{ config(alias='average_pageviews', schema='analytics') }}
 
 SELECT
 	(SUM(cnt) / COUNT(1)) AS average_pageviews

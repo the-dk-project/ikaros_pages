@@ -1,7 +1,7 @@
 -- Number of average sessions per visitor
 -- Assumption: sessions are visits with more than 1 pageviews
 
-{{ config(alias='average_sessions') }}
+{{ config(alias='average_sessions', schema='analytics') }}
 
 SELECT
 	(SUM(cnt) / COUNT(1)) AS average_sessions

@@ -1,7 +1,7 @@
 -- Unique sessions
 -- Assumption: sessions are visits with more than 1 pageviews
 
-{{ config(alias='sessions') }}
+{{ config(alias='sessions', schema='analytics') }}
 
 SELECT
 	COUNT(1) AS sessions

@@ -1,0 +1,56 @@
+version: 2
+
+models:
+  - name: Aa raw unique_visitors
+    columns:
+      - name: unique_visitors
+        tests:
+          - unique
+          - not_null
+
+  - name: Ab raw pageviews
+    columns:
+      - name: CONCAT(timestamp, anonymous_id)
+        tests:
+          - unique
+          - not_null
+
+  - name: Ac raw sessions
+    columns:
+      - name: anonymous_id
+        tests:
+          - unique
+          - not_null
+
+  - name: Ba raw average_pageviews
+    columns:
+      - name: anonymous_id
+        tests:
+          - unique
+          - not_null
+
+  - name: Bb raw average_sessions
+    columns:
+      - name: anonymous_id
+        tests:
+          - unique
+          - not_null
+
+  - name: Ca raw average_session_duration
+    columns:
+      - name: anonymous_id
+        tests:
+          - unique
+          - not_null
+
+      - name: start_time
+        tests:
+          - not_null
+      
+      - name: end_time
+        tests:
+          - not_null
+
+      - name: duration_in_sec
+        tests:
+          - not_null

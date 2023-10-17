@@ -1,8 +1,0 @@
-version: 2
-
-sources:
-  - name: snowflake_db
-    database: mydb
-    schema: public
-    tables: 
-      - name: ikaros_pages

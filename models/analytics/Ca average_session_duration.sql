@@ -2,7 +2,7 @@
 -- Solution: Got the start time and end time of each anonymous_id
 -- Get the time difference in seconds, then get the total average
 
-{{ config(alias='average_session_duration') }}
+{{ config(alias='average_session_duration', schema='analytics') }}
 
 SELECT
 	SUM(duration_in_sec) / COUNT(1) AS average_duration_in_sec

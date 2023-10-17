@@ -33,7 +33,8 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 models:
   ikaros_pages:
-    # Config indicated by + and applies to all files under models/example/
+    # Config indicated by + and applies to all files under models/staging/
     staging:
       +materialized: table
-      +schema: staging
+    analytics:
+      +materialized: table
